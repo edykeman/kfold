@@ -199,6 +199,8 @@
 
           io = 1
           dt = 1.0d-2
+
+          tout = dt
           time = tstart
 
           IF ( istart ) THEN
