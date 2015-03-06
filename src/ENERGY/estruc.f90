@@ -81,7 +81,7 @@
           ENDIF
 
         ENDDO
-           write(99,*)'nl = ',nl
+
         !=== Compute Energy ===!
 
         DO il=1,nl
@@ -94,7 +94,7 @@
           !=== Loop Energy ===!
 
           CALL ELOOP (iseq,ibsp,i,j,n,el)
-          write(99,*)'eloop #',il,el
+
           e = e + el
 
           !=== Stacking Energy ===!
