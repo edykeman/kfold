@@ -1,1 +1,34 @@
-ssss
+THIS SOFTWARE IS FREE TO USE/REDISTRIBUTE ACCORDING TO LICENCE
+PLEASE CITE E.C. Dykeman IF YOUR WORK MAKES USE OF THIS SOFTWARE.
+
+To Compile in UNIX/LINUX:
+
+(1) Make sure FORTRAN is installed on your computer
+(2) Edit Makefile and change F90 to appropriate FORTRAN compiler (e.g. gfortran)
+(3) FFLAGS allows you to compile with optional debugging flags (e.g. -fcheck=bounds)
+(4) From the command line, type make. You should be left with the executable Kfold.x
+
+To Run:
+
+(1) From the command line type: ./Kfold.x -n number -i seqfile -o trajectory -l logfile -t maxtime -s integer seed
+(2) number is the total number of simulations you wish to perform
+(3) seqfile contains the sequence on first line, the starting fold on the second line and the stopping fold
+    on the third line. If no stopping fold is specified, then Kfold will compute a trajectory until maxtime
+    is encountered.
+(4) trajectory will contain the trajectory output in a log_10 time scale
+(5) logfile will contain the first passage times to fold from the start state to the end state if the stopping
+    structure is specified
+(6) maxtime is the final time that you wish to simulate until (in microseconds)
+(7) integer seed is the seed needed for the random number generator
+
+Examples: (Execute Kfold.x from the Examples directory)
+
+(1) stmv.start contains a strucutre of the STMV genome.
+    To run a small 100 microsecond trajectory type:
+    ./Kfold.x -i stmv.start -o stmv.traj -t 100 -s 81231
+(2) spliced.start contains the sequence from the spliced leader of L. Collosoma
+    To run a small 100 millisecond trajectory type:
+    ./Kfold.x -i spliced.start -o spliced.traj -t 100000 -s 7112
+(3) 20mer.start contains a small 20 nt RNA sequence.
+    To run a small 100 millisecond trajectory type:
+    ./Kfold.x -i 20mer.start -o 20mer.traj -t 100000 -s 621023
