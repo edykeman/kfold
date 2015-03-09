@@ -24,11 +24,11 @@ To Run:
 Examples: (Execute Kfold.x from the Examples directory)
 
 (1) stmv.start contains a strucutre of the STMV genome.
-    To run a small 100 microsecond trajectory type:
-    ./Kfold.x -i stmv.start -o stmv.traj -t 100 -s 81231
+    To run a small 1 millisecond trajectory type:
+    ./Kfold.x -i stmv.start -o stmv.traj -t 1000 -s 81231
 (2) spliced.start contains the sequence from the spliced leader of L. Collosoma
-    To run a small 100 millisecond trajectory type:
-    ./Kfold.x -i spliced.start -o spliced.traj -t 100000 -s 7112
+    To run a small 10 millisecond trajectory type:
+    ./Kfold.x -i spliced.start -o spliced.traj -t 10000 -s 7112
 (3) 20mer.start contains a small 20 nt RNA sequence.
     To run a small 100 millisecond trajectory type:
     ./Kfold.x -i 20mer.start -o 20mer.traj -t 100000 -s 621023
