@@ -1052,7 +1052,7 @@
 
                 !=== Delete Loop jndx ===!
 
-                !=== Copy Loop nl to indx ===!
+                !=== Copy Loop nl to jndx ===!
 
                 IF ( jndx /= nl ) THEN
 
@@ -1101,10 +1101,6 @@
                   r% psum(nsum) = 0.0d0
                 ENDIF
                 ENDIF
-
-                !=== Recalc Main Loop? ===!
-
-                IF ( jndx /= indx ) CALL LOOP_REAC (r,indx)
 
               ENDIF
 
